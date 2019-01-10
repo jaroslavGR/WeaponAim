@@ -1,19 +1,20 @@
-html, body {
+html,
+body {
       margin: 0;
       padding: 0;
       width: 100%;
 }
- 
+
 body {
       font-family: sans-serif;
       font-weight: lighter;
 }
- 
+
 header {
       width: 100%;
       height: 15vh;
 }
- 
+
 .content {
       width: 94%;
       margin: 4em auto;
@@ -21,7 +22,7 @@ header {
       line-height: 30px;
       text-align: justify;
 }
- 
+
 .logo {
       line-height: 60px;
       position: fixed;
@@ -32,7 +33,7 @@ header {
       font-size: 20px;
       letter-spacing: 2px;
 }
- 
+
 nav {
       position: fixed;
       width: 100%;
@@ -40,35 +41,36 @@ nav {
       z-index: 1;
       font-family: sans-serif;
 }
- 
+
 nav ul {
       line-height: 60px;
       list-style: none;
-      background: rgba(0, 0, 0, 0);
+      background: rgba(255, 255, 255, 0);
       overflow: hidden;
-      color: #000;
+      color: rgb(255, 255, 255);
       padding: 0;
       text-align: right;
       margin: 0;
       padding-right: 40px;
       transition: 1s;
 }
- 
+
 nav.black ul {
       background: #666666;
 }
- 
+
 nav ul li {
       display: inline-block;
-      padding: 16px 40px;;
+      padding: 16px 40px;
+      ;
 }
- 
+
 nav ul li a {
       text-decoration: none;
-      color: #;
+      color: #fff;
       font-size: 16px;
 }
- 
+
 .menu-icon {
       line-height: 60px;
       width: 100%;
@@ -80,137 +82,173 @@ nav ul li a {
       color: #fff;
       display: none;
 }
- 
+
+.background-height {
+      background: url(img/background.jpg) no-repeat 50% 50%;
+      background-size: cover;
+}
+
 @media(max-width: 786px) {
- 
+
       .logo {
             position: fixed;
             top: 0;
             margin-top: 16px;
       }
- 
+
       nav ul {
             max-height: 0px;
-            background: #000;
+            background: rgb(255, 255, 255);
       }
- 
+
       nav.black ul {
             background: #666666;
       }
- 
+
       .showing {
             max-height: 34em;
       }
- 
+
       nav ul li {
             box-sizing: border-box;
             width: 100%;
             padding: 24px;
             text-align: center;
       }
- 
+
       .menu-icon {
             display: block;
       }
- 
+
 }
 
 /* slide show */
 
-* {box-sizing: border-box}
-body {font-family: sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+* {
+      box-sizing: border-box
+}
+
+body {
+      font-family: sans-serif;
+      margin: 0
+}
+
+.mySlides {
+      display: none
+}
+
+img {
+      vertical-align: middle;
+}
+
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
 }
 
 /* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.prev,
+.next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+      right: 0;
+      border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.active,
+.dot:hover {
+      background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+      from {
+            opacity: .4
+      }
+
+      to {
+            opacity: 1
+      }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+      from {
+            opacity: .4
+      }
+
+      to {
+            opacity: 1
+      }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+
+      .prev,
+      .next,
+      .text {
+            font-size: 11px
+      }
 }

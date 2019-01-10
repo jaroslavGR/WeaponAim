@@ -13,92 +13,102 @@
 
 <body>
     <div class="wrapper">
-        <header>
+        <div class="background-height">
+            <header>
 
-            <nav>
+                <nav>
 
-                <div class="menu-icon">
-                    <i class="fa fa-bars fa-2x"></i>
+                    <div class="menu-icon">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+
+                    <div class="logo">
+                        <img src="img/logo.png" alt="WeaponAimLogo" height="45" width="171">
+                    </div>
+
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="#">Informace</a>
+                            </li>
+                            <li>
+                                <a href="#">Recenze</a>
+                            </li>
+                            <li>
+                                <a href="#">Novinky</a>
+                            </li>
+                            <li>
+                                <a href="#">Forum</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </header>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="img/remington.png" style="width:100%">
+                    <div class="text">Remington 1911</div>
                 </div>
 
-                <div class="logo">
-                    <img src="img/logo.png" alt="WeaponAimLogo" height="45" width="171">
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img/silver.png" style="width:100%">
+                    <div class="text">Caption Two</div>
                 </div>
 
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="#">Informace</a>
-                        </li>
-                        <li>
-                            <a href="#">Recenze</a>
-                        </li>
-                        <li>
-                            <a href="#">Novinky</a>
-                        </li>
-                        <li>
-                            <a href="#">Forum</a>
-                        </li>
-                    </ul>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img/" style="width:100%">
+                    <div class="text">Caption Three</div>
                 </div>
-            </nav>
 
-        </header>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="img/crap.jpg" style="width:100%">
-                <div class="text">Caption Text</div>
             </div>
+            <br>
 
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="img/" style="width:100%">
-                <div class="text">Caption Two</div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="img/" style="width:100%">
-                <div class="text">Caption Three</div>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        </div>
-        <br>
-
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
 
         <div class="content">
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                type
+                specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem
+                Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+                versions
                 of Lorem Ipsum.
             </p>
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                type
+                specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem
+                Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+                versions
                 of Lorem Ipsum.
             </p>
         </div>
     </div>
 
     <script type="text/javascript">
-
         // Menu-toggle button
 
         $(document).ready(function () {
@@ -112,14 +122,10 @@
         $(window).on("scroll", function () {
             if ($(window).scrollTop()) {
                 $('nav').addClass('black');
-            }
-
-            else {
+            } else {
                 $('nav').removeClass('black');
             }
         })
-
-
     </script>
     <script>
         var slideIndex = 1;
@@ -137,8 +143,12 @@
             var i;
             var slides = document.getElementsByClassName("mySlides");
             var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
